@@ -1,0 +1,25 @@
+{{!-- 模态框 --}}
+<div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="blog-modal--wrap">
+      <div class="blog-modal--head">
+        <h4 class="blog-modal--title">{{title}}</h4>
+        <button type="button" class="iconfont blog-modal--close" data-btn-target="close" data-dismiss="modal" aria-label="Close">&#xe64a;</button>
+      </div>
+      <div class="blog-modal--content">
+        <form class="form-horizontal" id="{{formType}}">
+           {{#each formData}}
+            <div class="form-group">
+              <label class="control-label">{{label}}</label>
+              <input type="{{type}}" name="{{query}}" data-input-query="{{query}}" placeholder="{{placeholder}}" >
+            </div>
+          {{/each}}
+          
+          <div class="blog-modal--foot">
+            {{#each btns}}
+              <button type="{{type}}" data-toggle="{{toggle}}" data-target="{{targetName}}" data-dismiss="{{dismiss}}">{{name}}</button>
+            {{/each}}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

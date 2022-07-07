@@ -1,0 +1,74 @@
+  .blog-main
+    .blog-title--input,
+    .full-screen-container,
+    .blog-write--column
+      margin: 0 auto
+      width: 1060px
+    .blog-title--input
+      margin: 10px auto
+      input
+        display: block;
+        padding: 0 10px
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        font-size: 24px;
+        border-radius: 4px;
+        width: 100%;
+        outline: none
+        &:focus
+          box-shadow: rgba(0, 150, 94, 0.25) 0px 0px 0px 4px
+          border: 1px solid rgb(0, 201, 126)
+    .blog-write--column
+      position relative
+      margin-bottom 10px
+      .blog-column--show
+        padding: 0 10px
+        font-size 16px
+        width fit-content
+        height: 1.5em
+        box-sizing: border-box
+        cursor pointer  
+        outline: none
+        border: 1px solid #ced4da;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        // &:hover,
+        &.active
+          box-shadow: rgba(0, 150, 94, 0.25) 0px 0px 0px 4px
+          border: 1px solid rgb(0, 201, 126)
+          color: #6CB2DD
+          background-color #6C757D
+      .blog-column--select
+        display: none
+        position: absolute
+        left: 0
+        top: 100%
+        flex-wrap: wrap
+        padding: 5px
+        width: 240px
+        z-index 999
+        background-color #fff
+        border: 1px solid #D9D9D9
+        &>span,&>div {
+          margin: 2px
+          padding: 5px
+          border-radius: 3px
+          color: #00AFC9
+          font-size 14px
+          line-height 20px
+          cursor pointer
+          background-color #E5F4EF
+        }
+        &>div {
+          color #ea4727
+        }
+
+  @media screen and (max-width 1060px)
+    .blog-main
+      .blog-head--input,
+      .full-screen-container
+        width: 760px

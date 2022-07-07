@@ -1,0 +1,19 @@
+{{!-- 文章列表 --}}
+{{#each list}}
+  <article class="blog-content--item">
+    <h3 class="blog-item--title"  data-router="article" data-id="{{ _id }}">{{title}}</h3>
+    <div class="blog-item--info">
+      <a href="javascript:;" class="blog-info--author">
+        <img class="blog-author--avatar" src="{{#if author.avatar}} {{ author.avatar }} {{else}} http://127.0.0.1:3000/user/default.webp {{/if}}" alt="">
+        <span>{{#if author.nickname}} {{ author.nickname }} {{else}} <i>已注销</i>{{/if}}</span>
+      </a>
+      <span class="blog-item--date">
+        <i class="iconfont">&#xec1e;</i>{{date}}
+      </span>
+      <a><i class="iconfont">&#xe65a;</i> <span>{{#if like_num}}{{like_num}}{{else}}赞{{/if}}</span></a>
+      <a href="javascript:;"><i class="iconfont">&#xe600;</i> <span>{{#if comment_num}}{{comment_num}}{{else}}评论{{/if}}</span></a>
+    </div>
+  </article>
+{{/each}}
+
+

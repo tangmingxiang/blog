@@ -1,0 +1,43 @@
+{
+  "name": "bolg-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-styl": "stylus ./src/styl -o ./public/css",
+    "build": "webpack --mode production --config ./config/webpack.prod.js",
+    "dev": "webpack --config ./config/webpack.dev.js",
+    "start": "webpack serve --config ./config/webpack.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wangeditor/editor": "^5.1.0",
+    "axios": "^0.27.2",
+    "colors.css": "^3.0.0",
+    "jquery": "^1.12.4",
+    "jsencrypt": "^3.2.1",
+    "normalize.css": "^8.0.1",
+    "sme-router": "^0.12.8",
+    "validator": "^13.7.0",
+    "validator.tool": "^2.2.4"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "stylus": "^0.58.1",
+    "stylus-loader": "^7.0.0",
+    "webpack": "^5.73.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

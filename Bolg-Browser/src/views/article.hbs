@@ -1,0 +1,52 @@
+{{!-- 文章详情页 --}}
+<section class="blog-slide--wrap">
+  <div>作者信息栏，待完善</div>
+</section>
+<section class="blog-container">
+  <div class="blog-article--content" data-id="{{_id}}">
+    <h3 class="blog-item--title">{{title}}</h3>
+    <div class="blog-item--moreInfo">
+      <a class="blog-author--info">
+        <img src="{{#if author.avatar}} {{ author.avatar }} {{else}} http://127.0.0.1:3000/user/default.webp {{/if}}" alt="{{author.nickname}}">
+        <span class="blog-item--author">{{#if author.nickname}} {{ author.nickname }} {{else}} <i>已注销</i> {{/if}}</span>
+      </a>
+      <p class="blog-item--date">发布于 {{date}}</p>
+    </div>
+    {{#if cover}}
+      <img class="blog-item--illu" src="{{cover}}" alt="{{title}}">
+    {{/if}}
+    {{{body}}}
+    {{#if column.name}}
+      <div class="blog-article-column">
+        {{column.name}}
+      </div>
+    {{/if}}
+    <div class="blog-article--hitAndLike">
+      <span class="hit">阅读 {{hit_num}}</span> | <span class="like">点赞 {{like_num}}</span>
+    </div>
+    <div class="blog-article--footer">
+      <div class="blog-article--thumb" data-router="thumbUp">赞</div>
+      <div class="blog-article--share" data-router="share">分享</div>
+    </div>
+  </div>
+  <div class="blog-article--comment">
+    <div class="blog-comment--count">{{comment_num}} 条评论</div>
+    <div class="blog-comment--show">
+      <div class="blog-comment--write">
+        <img src={{userAvatar}} alt="">
+        <input type="text" placeholder="撰写评论 ..." class="blog-comment--input">
+      </div>
+      <div class="blog-comment--submit">提交评论</div>
+      <div class="blog-comment--list">
+        {{#each comments}}
+          <div class="blog-comment--item">
+            <img src="{{#if uid.avatar}} {{ uid.avatar }} {{else}} http://127.0.0.1:3000/user/default.webp {{/if}}" alt=""><span>{{#if uid.nickname}} {{ uid.nickname }} {{else}} <i>已注销</i> {{/if}}：</span>{{content}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="blog-more--info">
+  <div>广告栏，待完善</div>
+</section>

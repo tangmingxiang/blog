@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+
+  </div>
+  <script src="../node_modules/handlebars/dist/handlebars.runtime.min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../public/js/templateControl.js"></script>
+  <script src="../views/modal.template.js"></script>
+  <script src="../views/article.template.js"></script>
+  <script>
+   
+    let data = {
+      'articles':[
+        {
+          title: '文章标题',
+          date: '2020-11-25',
+          illu: '../public/img/article.png',
+          desc: '文章内容文章内容文章章简介文章摘要文章内容文章内容容文章内容文章简介文章摘要文章章文章简介文章摘文章摘要...',
+          tags: ['生活', '技术', '艺术'],
+          like: '10',
+          comment: '40'
+        },
+        {
+          title: '文章标题',
+          date: '2020-11-25',
+          illu: 'public/img/article.png',
+          desc: '文章内容文章内容文章章简介文章摘要文章内容文章内容容文章内容文章简介文章摘要文章章文章简介文章摘文章摘要...',
+          tags: ['生活', '技术', '艺术'],
+          like: '10',
+          comment: '40'
+        }
+      ]
+  }
+  let html = TemplateControl.render('article', data)
+  console.log(html);
+  $('.wrap')[0].innerHTML = html
+  </script>
+
+</body>
+</html>

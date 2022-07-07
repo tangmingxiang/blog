@@ -1,0 +1,253 @@
++prefix-classes('blog-')
+  .main
+    position relative
+    margin: 20px auto
+    width 100%
+    overflow hidden /* 清除浮动 */
+    .slide--wrap
+      position fixed
+      top 80px
+      left 50%
+      transform: translateX(-530px) // 530 = 600 / 2 + 160 + (300 - 160) / 2
+                                    // 530 = 700 / 2 + 160 + (200 - 160) / 2
+      box-sizing border-box
+      padding: 10px 0 
+      border-top: 1px solid #CCCED1
+      border-bottom: 1px solid #CCCED1
+      width 160px
+      height: auto
+      font-size: 16px
+      line-height 20px
+      a 
+        display: block
+        padding-left: 20px
+        line-height 40px
+        border-radius: 4px
+        i
+          font-style: normal
+          font-weight: bold
+          padding-right .75em
+          color: #00965E
+        &.column--active
+          color: #fff
+          background-color: #00965E
+          i
+            color: #fff
+    .container
+      margin: 0 auto
+      padding: 0 10px
+      box-sizing border-box
+      width 700px
+      min-height: 700px
+      // transform: translateX(-70px) // 因为 右侧边栏的宽度比左侧边栏的宽度 宽 140px
+      transform: translateX(-20px) // 因为 右侧边栏的宽度比左侧边栏的宽度 宽 40px
+      user-select: text
+      .content--item
+        background-color: #fff
+        padding: 10px
+        border-bottom: 1px solid #efefef
+        .item--title
+          cursor pointer
+          font-weight normal
+          font-size 20px
+          line-height 30px
+        .item--info 
+          padding-top: 10px
+          height: 25px
+          line-height 25px
+          box-sizing: content-box
+          color: #6C757D
+          a
+            color: #6C757D
+          i
+            font-size: 14px
+          .info--author
+            font-size: 16px
+            height: 25px
+            // line-height 25px
+            color: #00965E
+            font-weight: bold
+            &:hover
+              background-color: transparent
+            .author--avatar
+              width 25px
+              height 25px
+              border-radius: 50%
+              vertical-align: top
+            span
+            // line-height 25px
+              i
+                font-weight normal
+                color #6C757D
+            
+      .article--content
+        padding: 20px
+        border-radius: 4px
+        background-color: #fff  
+        .item--title
+          font-size: 30px
+          text-align left
+          font-weight: normal
+        .item--moreInfo
+          margin-bottom 2px
+          font-size: 16px
+          line-height 25px
+          overflow hidden
+          .author--info
+            float: left
+            font-weight: bold
+            color: #00965E
+            img 
+              width 25px
+              height: 25px
+              border-radius: 50%
+              vertical-align: middle
+            .item--author
+              vertical-align: middle
+              i
+                font-weight normal
+                color #6C757D
+          .item--date
+            float right 
+            font-size: 14px
+            height: 25px
+            line-height 32px
+            color: #6C757D
+        .item--illu
+          margin-bottom 4px
+        .article-column
+          margin: 5px 0
+          padding: 5px
+          border-radius: 3px
+          width fit-content
+          color: #00AFC9
+          font-size 14px
+          line-height 20px
+          background-color #E5F4EF
+        .article--hitAndLike
+          margin: 10px 0
+          font-size 12px
+          color: #6C757D
+        .article--footer
+          display: flex
+          justify-content: center
+          padding-top: 20px
+          border-top 1px solid #DFDFDF
+          .article--thumb,
+          .article--share 
+            margin 0 10px
+            border: 1px solid #00965E
+            border-radius: 4px
+            width: 70px
+            height: 40px
+            text-align center
+            color: #00965E
+            font-size 18px
+            line-height 40px
+            box-sizing border-box
+            cursor pointer
+            &:hover,&.article--thumbup
+              color: #fff
+              background-color: #00965E
+            &.article--thumbup
+              cursor: default
+      .article--comment
+        margin-top 20px
+        background-color #fff
+        overflow: hidden
+        .comment--count
+          padding: 10px 20px
+          border-bottom: 1px solid #efefef
+          font-size 18px
+          font-weight: bold
+        .comment--show
+          padding: 20px
+          .comment--write,
+          .comment--item
+            height: 40px
+            &::after
+              content: ''
+              clear both
+            img 
+              float left
+              width: 40px
+              height: 40px
+              border-radius: 50%
+            input,p
+              float right
+              padding-left: 5px
+              width: 580px
+              height: 40px  
+              border-radius: 4px
+              box-sizing: border-box
+              outline: none
+              border: 1px solid #efefef
+              transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            input:focus
+                box-shadow: rgba(0, 150, 94, 0.25) 0px 0px 0px 4px
+                border: 1px solid rgb(0, 201, 126)
+          .comment--submit
+            float: right
+            margin-top: 10px
+            padding: 0 10px
+            width: fit-content
+            height: 32px
+            line-height 32px
+            font-size: 16px
+            color: #fff
+            border-radius: 4px
+            box-sizing: border-box
+            background-color: #5ABB97 
+            &::after
+              content: ''
+              clear both
+            &.comment--submitable
+              background-color: #00965E
+              cursor: pointer  
+          .comment--list
+            clear: both
+            .comment--item
+              padding-top 10px
+              line-height 25px
+              word-break: break-all;
+              height: fit-content
+              img 
+                margin-right: 5px
+                width 25px
+                height: 25px
+                vertical-align: middle
+              span
+                font-weight: bold
+                color: #00965E
+                i
+                  font-weight normal
+                  font-style normal
+                  color #6C757D
+    .more--info
+      position: fixed
+      top: 80px
+      left: 50%
+      width: 200px
+      border-radius: 8px
+      transform: translateX(330px) // 530 - 200 
+      background-color #fff
+      div
+        height: 700px
+        background-color #777
+  @media screen and (max-width 1060px)
+    .main
+      .slide--wrap
+        transform: translateX(-430px) // 530 - (140 / 2) - (160 / 2) // 530 - (40 / 2) - (160 / 2)
+      .container
+        transform: translateX(80px) // 160 / 2
+        padding: 0 0 0 20px
+      .more--info
+        display: none
+  @media screen and (max-width 860px)
+    .main 
+      .slide--wrap
+        display: none
+      .container
+        transform: none
+        padding: 0
+  

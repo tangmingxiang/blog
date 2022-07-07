@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form">
+    <div>
+      <label for="email">EMail:</label>
+      <input type="email" name="email" placeholder="" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" />
+    </div>
+    <div>
+      <label for="repassword">Confirm Password:</label>
+      <input type="repassword" name="repassword" />
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+  <script type="text/javascript" src="../node_modules/validator.tool/dist/validator.min.js"></script>
+  <!-- <script type="text/javascript">
+    var validator = new Validator({
+      form: document.getElementById('form'),
+      rules: {
+        email: {
+          validate: (val) => val ? '' : 'Required!',
+        },
+        password: {
+          validate: (val) => val < 5 || val > 15 ? '字数大于5，小于15' : ''
+        },
+        repassword: {
+          validate: (val) => !val ? 'Required!' : '',
+        },
+      }
+    });
+    
+    validator.form.onsubmit = (evn) => {
+      evn.preventDefault();
+      const values = validator.getValues();
+      console.log(validator);
+      console.log(validator.rules.email.validate());
+      console.log(values);
+    }
+    
+    validator.form.onreset = (evn) => {
+      const data = validator.reset();
+      console.log(data);
+    }
+  </script> -->
+</body>
+</html>

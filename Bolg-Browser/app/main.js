@@ -1,0 +1,7 @@
+import '@wangeditor/editor/dist/css/style.css'
+import './action/action_head'
+import './action/action_write'
+import './action/artion_article'
+import './action/action_column'
+import './action/action_comment'
+import './module/initModal'
