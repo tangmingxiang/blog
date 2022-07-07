@@ -1,0 +1,19 @@
+/**  文章详情页，文章主题的样式  **/
+.wang-editor
+  padding 20px
+  border-top 1px solid #efefef
+  overflow hidden
+  h1, h2, h3, h4, h5, h6
+    margin 20px 0
+  ul,ol 
+    padding-left: 20px
+  p
+    padding 2px 0
+  pre 
+    width 100%
+    overflow auto
+    background-color rgb(245,242,240)
+  a
+    color blue
+    &:hover
+      background-color transparent

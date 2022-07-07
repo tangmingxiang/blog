@@ -1,0 +1,70 @@
+* 
+  margin 0
+  padding 0
+  user-select none
+html
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  color #222
+body 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background-color #E9ECEF
+a
+  cursor pointer
+  color rgb(36, 33, 33)
+  text-decoration none
+
+a:hover
+  background-color #E2E6EA
+  text-decoration none;
+
+img 
+  width 100%;
+  height auto;
+
+ul
+  list-style none
+  margin 0
+  padding 0
+
+h1 
+  margin 0
+
+i
+  font-style normal
+
+::placeholder
+  color #ccc
+
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar 
+  width: 5px; /*对垂直滚动条有效*/
+  height: 5px;  /*对水平滚动条有效*/
+ 
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #ececec;
+  // border-radius: 3px;
+ 
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb 
+  // border-radius: 7px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: rgb(74,124,229);
+
+ 
+/* 光标移到滚动滑块上样式颜色变深 */
+::-webkit-scrollbar-thumb:hover 
+  // display: block
+  background-color: rgb(36, 102, 244);
+ 
+/*定义两端按钮的样式*/
+::-webkit-scrollbar-button 
+  display: none
+  background-color: rgb(54, 62, 62);
+ 
+/*定义右下角汇合处的样式*/
+::-webkit-scrollbar-corner 
+  background: khaki;
