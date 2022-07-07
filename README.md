@@ -3,7 +3,9 @@
 1.本地需先下载 MongoDB 数据库，并启动数据库服务
 
 2.用 VSCode 打开 blog-server 文件夹，并在终端运行 npm install 命令安装依赖
+
   （注意若 MongoDB 数据库的连接地址不是 mongodb://127.0.0.1:27017/Blog，则需要先在 \blog-server\plugins\db.js 文件下进行修改配置）
+  
   运行 node app.js 命令启动服务器  （正常情况下，可以看到终端输出 “监听...” 和 “mongodb://127.0.0.1:27017/db_blog is connected” 两行内容）
   
 3.1 用 VSCode 打开 blog-vue 文件夹，并在终端运行 yarn install 命令安装依赖
