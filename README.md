@@ -1,6 +1,6 @@
-# blog
 博客网站
-1.需先下载 MongoDB 数据库，并启动数据库服务
+
+1.本地需先下载 MongoDB 数据库，并启动数据库服务
 
 2.用 VSCode 打开 blog-server 文件夹，并在终端运行 npm install 命令安装依赖
   （注意若 MongoDB 数据库的连接地址不是 mongodb://127.0.0.1:27017/Blog，则需要先在 \blog-server\plugins\db.js 文件下进行修改配置）
